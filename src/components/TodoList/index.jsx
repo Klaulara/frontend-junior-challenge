@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./styles.css";
 import { getTodoList } from "services/api";
 import { useDispatch, useSelector } from "react-redux";
 import TodoListItem from "components/TodoListItem";
@@ -22,17 +21,24 @@ const TodoList = () => {
   };
 
   return (
-    <div className="todo-list">
-      <span className="todo-list-title">Things to do:</span>
-      <div className="todo-list-content">
-        {list.map((e, index) => (
-          <TodoListItem e={e} />
-        ))}
-      </div>
-      {/* <div className="no-todos">
-        Looks like you&apos;re absolutely free today!
-      </div> */}
+    <div className="max-w-md container mx-auto">
+      <p className="text-xl font-bold text-center">THINGS TO DO:</p>
+      {list.map((e, index) => (
+        <TodoListItem e={e} />
+      ))}
     </div>
+
+    // <div className="todo-list">
+    //   <span className="todo-list-title">Things to do:</span>
+    //   <div className="todo-list-content">
+    //     {list.map((e, index) => (
+    //       <TodoListItem e={e} />
+    //     ))}
+    //   </div>
+    //   <div className="no-todos">
+    //     Looks like you&apos;re absolutely free today!
+    //   </div>
+    // </div>
   );
 };
 
