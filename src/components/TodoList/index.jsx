@@ -12,33 +12,17 @@ const TodoList = () => {
     dispatch(getTodoList());
   }, [dispatch]);
 
-  const handleDelete = (todoId) => {
-    // Fix an ability to delete task
-  };
-
-  const toggleCheck = (todoId, isChecked) => {
-    // Fix an ability to toggle task
-  };
-
   return (
-    <div className="max-w-md container mx-auto">
+    <div className="max-w-lg container mx-auto mt-5">
       <p className="text-xl font-bold text-center">THINGS TO DO:</p>
-      {list.map((e, index) => (
-        <TodoListItem e={e} />
-      ))}
+      <hr></hr>
+      <div className="max-w-sm container mx-auto mt-5">
+        {list.map((element, index) => (
+          <TodoListItem element={element} key={index} />
+        ))}
+      </div>
     </div>
 
-    // <div className="todo-list">
-    //   <span className="todo-list-title">Things to do:</span>
-    //   <div className="todo-list-content">
-    //     {list.map((e, index) => (
-    //       <TodoListItem e={e} />
-    //     ))}
-    //   </div>
-    //   <div className="no-todos">
-    //     Looks like you&apos;re absolutely free today!
-    //   </div>
-    // </div>
   );
 };
 

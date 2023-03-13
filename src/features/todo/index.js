@@ -8,10 +8,19 @@ export const todoSlice = createSlice({
     reducers: {
         setTodoList: (state, action) => {
             state.list = action.payload;
+        },
+        setNewTodo: (state, action) => {
+            state.list = action.payload;
+        },
+        setToggleTodo: (state, action) => {
+            state.list = action.payload;
+        },
+        setDeleteTodo: (state, action) => {
+            state.list = action.payload;
         }
     },
 });
 
-export const { setTodoList } = todoSlice.actions;
+export const { setTodoList, setNewTodo, setToggleTodo, setDeleteTodo } = todoSlice.actions;
 
 export default todoSlice.reducer;
